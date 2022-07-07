@@ -1,0 +1,8 @@
+CREATE TABLE videos
+(id SERIAL PRIMARY KEY, 
+title VARCHAR(80) NOT NULL,
+image_url VARCHAR(120) NOT NULL, 
+video_url VARCHAR(120) NOT NULL,  
+short_desc VARCHAR(200) NOT NULL);
+
+CREATE EXTENSION pg_trgm;
