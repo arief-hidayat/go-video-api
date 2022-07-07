@@ -14,7 +14,8 @@ DB_NO_SSL=true DB_PWD=password123 go run ./server/cmd/main.go
 or if you want to run on docker
 ```
 docker build -t api .
-docker run -e DB_NO_SSL=true -e DB_PWD=password123 -p 3000:3000 api 
+docker run -e DB_NO_SSL=true -e DB_PWD=password123 \
+-eDB_HOST=host.docker.internal -p 8000:8000 api 
 ```
 
 ### Test API

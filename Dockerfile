@@ -4,7 +4,10 @@ WORKDIR /app
 COPY go.mod .
 COPY go.sum .
 RUN go env -w GOPROXY=direct && go mod download
-COPY controllers/ models/ query/ server/ .
+COPY controllers/ ./controllers/
+COPY models/ ./models/  
+COPY query/ ./query/  
+COPY server/ ./server/  
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /go/bin/api  ./server/cmd/main.go
 # WORKDIR $GOPATH/src/app/
 # COPY . .

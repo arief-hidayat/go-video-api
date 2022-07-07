@@ -1,4 +1,4 @@
-module go-video-api
+module github.com/arief-hidayat/go-video-api
 
 go 1.18
 

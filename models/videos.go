@@ -2,8 +2,9 @@ package models
 
 import (
 	"database/sql"
-	"go-video-api/query"
 	"log"
+
+	"github.com/arief-hidayat/go-video-api/query"
 
 	_ "github.com/lib/pq"
 )

@@ -1,6 +1,6 @@
 package main
 
-import "go-video-api/server"
+import "github.com/arief-hidayat/go-video-api/server"
 
 func main() {
 	s := server.NewServer()

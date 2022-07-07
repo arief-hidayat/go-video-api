@@ -2,9 +2,10 @@ package server
 
 import (
 	"fmt"
-	"go-video-api/controllers"
-	"go-video-api/models"
 	"log"
+
+	"github.com/arief-hidayat/go-video-api/controllers"
+	"github.com/arief-hidayat/go-video-api/models"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"

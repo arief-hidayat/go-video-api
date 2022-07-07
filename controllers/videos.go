@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"go-video-api/models"
 	"log"
 	"net/http"
+
+	"github.com/arief-hidayat/go-video-api/models"
 
 	"github.com/labstack/echo/v4"
 
