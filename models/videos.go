@@ -14,15 +14,20 @@ var db *sql.DB
 
 // https://www.alexedwards.net/blog/organising-database-access
 // InitDB sets up setting up the connection pool global variable.
-func InitDB(dataSourceName string) error {
+func InitDB(dataSourceName string, maxOpenConnections int) error {
 	var err error
 
 	db, err = sql.Open("postgres", dataSourceName)
 	if err != nil {
 		return err
 	}
-
+	db.SetMaxOpenConns(maxOpenConnections)
+	db.SetMaxIdleConns(maxOpenConnections)
 	return db.Ping()
+}
+
+func CloseDB() {
+    db.Close()
 }
 
 func GetVideos(queryStr string) ([]interface{}, error) {
